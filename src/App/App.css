@@ -1,0 +1,83 @@
+table {
+  text-align: center;
+  width: 100vw;
+}
+th {
+  height: 30px;
+  border: 5px solid turquoise;
+  background-color: aqua;
+  font-weight: bold;
+  font-size: 22px;
+}
+td {
+  height: 50px;
+  border: 5px solid turquoise;
+  font-size: 18px;
+}
+button {
+  height: 25px;
+  width: 100px;
+  border-radius: 10px;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.profile img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.profile-name h2 {
+  font-size: 20px;
+}
+.profile-name p {
+  color: #696969;
+}
+.status {
+  display: flex;
+  justify-content: center;
+}
+.warp-status-is-absolute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+.warp-status-is-late {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+.warp-status-is-onTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+.score {
+  background-color: green;
+  width: 100px;
+  height: 50px;
+}
+.score-is-not {
+  background-color: red;
+  width: 100px;
+  height: 50px;
+}
