@@ -14,7 +14,7 @@ function App() {
           <div className="container-dialog">
             <div className="nav">
               <h2>
-                ข้อมูลการเข้างานของทั้งหมด {dialoglist.employee.title.name}
+                ข้อมูลการเข้างานทั้งหมดของ {dialoglist.employee.title.name}
                 {dialoglist.employee.firstName} {dialoglist.employee.lastName}
               </h2>
               <i
