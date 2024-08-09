@@ -18,6 +18,7 @@ button {
   height: 25px;
   width: 100px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .profile {
   display: flex;
@@ -80,4 +81,39 @@ button {
   background-color: red;
   width: 100px;
   height: 50px;
+}
+.container-dialog {
+  position: fixed;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  background-color: aquamarine;
+  border-radius: 20px;
+  height: 250px;
+  width: 400px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav h2 {
+  font-size: 22px;
+  margin: 10px 10px;
+}
+.fa-circle-xmark {
+  margin: 10px 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.fa-circle-xmark:hover {
+  background-color: red;
+  border-radius: 50%;
+}
+.content-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 20px;
 }
