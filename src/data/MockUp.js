@@ -100,11 +100,11 @@ const mockup = [
     ],
     summary: {
       late: 0,
-      early: 0,
+      early: 5,
       onTime: 2,
       leave: 0,
       absent: 23,
-      workAbsent: 0,
+      workAbsent: 10,
     },
   },
 ];

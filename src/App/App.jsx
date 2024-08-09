@@ -5,16 +5,18 @@ import mockup from "../data/MockUp";
 function App() {
   const [data] = useState(mockup);
   const [open, setOpen] = useState(false);
-  const [summaryList, setSummaryList] = useState();
-  const [summary, setSummary] = useState(0);
+  const [dialoglist, setDialoglist] = useState();
 
   const Dialog = () => {
     return (
       <dialog open={open}>
-        {summaryList && (
+        {dialoglist && (
           <div className="container-dialog">
             <div className="nav">
-              <h2>ข้อมูลการเข้างานทั้งหมด</h2>
+              <h2>
+                ข้อมูลการเข้างานของทั้งหมด {dialoglist.employee.title.name}
+                {dialoglist.employee.firstName} {dialoglist.employee.lastName}
+              </h2>
               <i
                 className="fa-regular fa-circle-xmark"
                 onClick={() => {
@@ -23,12 +25,30 @@ function App() {
               ></i>
             </div>
             <div className="content-dialog">
-              <p>late: {summaryList.late}</p>
-              <p>early: {summaryList.early}</p>
-              <p>onTime:{summaryList.onTime}</p>
-              <p>leave: {summaryList.leave}</p>
-              <p>absent: {summaryList.absent}</p>
-              <p>workabsent: {summaryList.workAbsent}</p>
+              <div className="left">
+                <p>late:</p>
+                <p>early:</p>
+                <p>onTime:</p>
+                <p>leave:</p>
+                <p>absent:</p>
+                <p>workabsent:</p>
+              </div>
+              <div className="center">
+                <p>{dialoglist.summary.late}</p>
+                <p>{dialoglist.summary.early}</p>
+                <p>{dialoglist.summary.onTime}</p>
+                <p>{dialoglist.summary.leave}</p>
+                <p>{dialoglist.summary.absent}</p>
+                <p>{dialoglist.summary.workAbsent}</p>
+              </div>
+              <div className="right">
+                <p>time</p>
+                <p>time</p>
+                <p>time</p>
+                <p>time</p>
+                <p>time</p>
+                <p>time</p>
+              </div>
             </div>
           </div>
         )}
@@ -90,7 +110,7 @@ function App() {
                   <button
                     onClick={() => {
                       setOpen(!open);
-                      setSummaryList(item.summary);
+                      setDialoglist(item);
                     }}
                   ></button>
                 </td>
