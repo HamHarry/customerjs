@@ -68,6 +68,9 @@ function App() {
         </thead>
         <tbody>
           {data.map((item, index) => {
+            const { absent, early, late, leave, onTime, workAbsent } =
+              item.summary;
+            const total = absent + early + late + leave + onTime + workAbsent;
             return (
               <tr key={index}>
                 <td>{item.employee.code}</td>
@@ -112,7 +115,9 @@ function App() {
                       setOpen(!open);
                       setDialoglist(item);
                     }}
-                  ></button>
+                  >
+                    {total}
+                  </button>
                 </td>
               </tr>
             );
